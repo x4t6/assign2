@@ -142,10 +142,10 @@ void draw() {
       }//if() end
       
       //----enemy chase----//
-      if(enemyX<fighterX){
-        if(enemyY < fighterY+20) 
+      if(enemyX+ENEMY_WIDTH/2<fighterX+FIGHTER_WIDTH){
+        if(enemyY+ENEMY_HEIGHT/2 < fighterY+22) 
           enemyY += ENEMY_SPEED ;
-        else if(enemyY > fighterY+FIGHTER_HEIGHT-20)
+        else if(enemyY+ENEMY_HEIGHT/2 > fighterY+FIGHTER_HEIGHT-22)
           enemyY -= ENEMY_SPEED ;
       }//if() end
       
