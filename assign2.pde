@@ -2,7 +2,7 @@
 PImage fighter, enemy, treasure, hpBar, bg1, bg2, bgGameStart, bgGameStart_light, bgGameOver, bgGameOver_light ;
 
 final int GAME_START = 1, GAME_RUN = 2, GAME_OVER = 3;
-final int FIGHTER_SPEED = 6, ENEMY_SPEED = 3, BG_SPEED = 2 ;
+final int FIGHTER_SPEED = 6, ENEMY_SPEED = 4, BG_SPEED = 2 ;
 final int GAME_WIDTH = 640, GAME_HEIGHT = 480 ;
 final int FIGHTER_WIDTH = 50, FIGHTER_HEIGHT = 50 ;
 final int ENEMY_WIDTH = 60, ENEMY_HEIGHT = 60 ;
