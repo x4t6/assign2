@@ -51,7 +51,7 @@ void draw() {
       if( 208 <= mouseX && mouseX <= 453 && 378 <= mouseY && mouseY <= 412){
         image(bgGameStart_light,0,0) ;
         if(mousePressed)gameState = GAME_RUN ;
-      }//if() end
+      }//if end
       break;
       
     case GAME_RUN :
@@ -70,44 +70,44 @@ void draw() {
         hpLength -= HP_Max/5 ;      
         enemyX = -60 ;
         enemyY = (int)random(45,420) ;  
-      }//if() end
+      }//if end
       if( (fighterX>=enemyX && fighterX<=enemyX+ENEMY_WIDTH ) && ( fighterY+FIGHTER_HEIGHT>=enemyY && fighterY+FIGHTER_HEIGHT<=enemyY+ENEMY_HEIGHT) ){
         hpLength -= HP_Max/5 ;      
         enemyX = -60 ;
         enemyY = (int)random(45,420) ;  
-      }//if() end
+      }//if end
       if( (fighterX+FIGHTER_WIDTH>=enemyX && fighterX+FIGHTER_WIDTH<=enemyX+ENEMY_WIDTH ) && ( fighterY+FIGHTER_HEIGHT>=enemyY && fighterY+FIGHTER_HEIGHT<=enemyY+ENEMY_HEIGHT) ){
         hpLength -= HP_Max/5 ;
         enemyX = -60 ;
         enemyY = (int)random(45,420) ;    
-      }//if() end
+      }//if end
       if( (fighterX+FIGHTER_WIDTH>=enemyX && fighterX+FIGHTER_WIDTH<=enemyX+ENEMY_WIDTH ) && ( fighterY>=enemyY && fighterY<=enemyY+ENEMY_HEIGHT) ){
         hpLength -= HP_Max/5 ;      
         enemyX = -60 ;
         enemyY = (int)random(45,420) ;  
-      }//if() end
+      }//if end
       
       //----get treasure----//
       if( ( treasureX>=fighterX && treasureX<=fighterX+FIGHTER_WIDTH ) && ( treasureY>=fighterY && treasureY<=fighterY+FIGHTER_HEIGHT ) ){
         if( hpLength < HP_Max ) hpLength += HP_Max/10 ;
         treasureX = (int)random(0,540) ;
         treasureY = (int)random(45,440) ;
-      }//if() end
+      }//if end
       if( ( treasureX>=fighterX && treasureX<=fighterX+FIGHTER_WIDTH ) && ( treasureY+TREASURE_HEIGHT>=fighterY && treasureY+TREASURE_HEIGHT<=fighterY+FIGHTER_HEIGHT ) ){
         if( hpLength < HP_Max ) hpLength += HP_Max/10 ;
         treasureX = (int)random(0,540) ;
         treasureY = (int)random(45,440) ;
-      }//if() end    
+      }//if end    
       if( ( treasureX+TREASURE_WIDTH>=fighterX && treasureX+TREASURE_WIDTH<=fighterX+FIGHTER_WIDTH ) && ( treasureY+TREASURE_HEIGHT>=fighterY && treasureY+TREASURE_HEIGHT<=fighterY+FIGHTER_HEIGHT ) ){
         if( hpLength < HP_Max ) hpLength += HP_Max/10 ;
         treasureX = (int)random(0,540) ;
         treasureY = (int)random(45,440) ;
-      }//if() end
+      }//if end
       if( ( treasureX+TREASURE_WIDTH>=fighterX && treasureX+TREASURE_WIDTH<=fighterX+FIGHTER_WIDTH ) && ( treasureY>=fighterY && treasureY<=fighterY+FIGHTER_HEIGHT ) ){
         if( hpLength < HP_Max ) hpLength += HP_Max/10 ;
         treasureX = (int)random(0,540) ;
         treasureY = (int)random(45,440) ;
-      }//if() end
+      }//if end
       
       //----bg move----//
       bg1X += BG_SPEED; bg2X += BG_SPEED; 
@@ -139,7 +139,7 @@ void draw() {
       if(enemyX > 640){
         enemyY = (int)(random(0,420));
         enemyX = -60 ;
-      }//if() end
+      }//if end
       
       //----enemy chase----//
       if(enemyX+ENEMY_WIDTH/2<fighterX+FIGHTER_WIDTH){
@@ -147,7 +147,7 @@ void draw() {
           enemyY += ENEMY_SPEED ;
         else if(enemyY+ENEMY_HEIGHT/2 > fighterY+FIGHTER_HEIGHT-22)
           enemyY -= ENEMY_SPEED ;
-      }//if() end
+      }//if end
       
       //----out of hp----//
       if(hpLength <= 0)
@@ -169,11 +169,11 @@ void draw() {
           treasureX = (int)random(0,540) ;
           treasureY = (int)random(45,440) ;
           hpLength = HP_Max/5 ;  
-        }//if() end
-      }//if() end
+        }//if end
+      }//if end
       break ;  
-  }//switch() end
-}//draw() end
+  }//switch end
+}//draw end
 void keyPressed(){
   if(key == CODED){
     switch(keyCode){
@@ -193,9 +193,9 @@ void keyPressed(){
       case RIGHT :
         rightPressed = true ;
         break ;
-    }//swtich() end
-  }//if() end
-}//keyPressed() end
+    }//swtich end
+  }//if end
+}//keyPressed end
 
 void keyReleased(){  
   if(key == CODED){
@@ -215,6 +215,6 @@ void keyReleased(){
       case RIGHT :
         rightPressed = false ;
         break ;
-    }//swtich() end
-  }//if() end
-}//keyReleased() end
+    }//swtich end
+  }//if end
+}//keyReleased end
